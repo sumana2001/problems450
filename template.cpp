@@ -2,12 +2,7 @@
 using namespace std;
 
 int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cout<<"Enter number: ";
-        cin>>arr[i];
-    }
+    int arr[] = {};
+    int n = sizeof(arr)/sizeof(arr[0]);
     return 0;
 }
