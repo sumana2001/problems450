@@ -5,7 +5,7 @@ using namespace std;
 class Queue
 {
 public:
-    int front, rear, capacity;
+    int front, rear;
     int a[MAX];
     Queue() { int front = rear = 0; }
     void enqueue(int data);
