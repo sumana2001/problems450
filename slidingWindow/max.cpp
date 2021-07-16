@@ -9,7 +9,14 @@ int main(){
     vector<int> ans;
     queue<int> maxNum;
     while(j<n){
-
+        if(j-i+1<k){
+            j++;
+        }
+        else if(j-i+1==k){
+            for(int i=maxNum.front();i<=maxNum.back;i++){
+                
+            }
+        }
     }
     return 0;
 }
