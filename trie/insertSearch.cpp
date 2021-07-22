@@ -14,40 +14,45 @@ public:
     }
 };
 
-void insert(string s,Node* trie){
-    int i=0;
-    Node* it=trie;
-    while(i<s.size()){
-        if(it->next[s[i]-'a']==NULL)
-            it->next[s[i]-'a']=new Node();
-        it=it->next[s[i]-'a'];
+void insert(string s, Node *trie)
+{
+    int i = 0;
+    Node *it = trie;
+    while (i < s.size())
+    {
+        if (it->next[s[i] - 'a'] == NULL)
+            it->next[s[i] - 'a'] = new Node();
+        it = it->next[s[i] - 'a'];
         i++;
     }
-    it->end=true;
+    it->end = true;
 }
 
-int search(string s,Node* trie){
-    int i=0;
-    Node* it=trie;
-    while(i<s.size()){
-        if(it->next[s[i]-'a']==NULL)
+int search(string s, Node *trie)
+{
+    int i = 0;
+    Node *it = trie;
+    while (i < s.size())
+    {
+        if (it->next[s[i] - 'a'] == NULL)
             return 0;
-        it=it->next[s[i]-'a'];
+        it = it->next[s[i] - 'a'];
         i++;
     }
-    if(it->end==true)
+    if (it->end == true)
         return 1;
     return 0;
 }
 
 int main()
 {
-    Node* trie=new Node();
-    string arr[]={"the","a","there","answer","any","by","bye","their"};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<n;i++){
-        insert(arr[i],trie);
+    Node *trie = new Node();
+    string arr[] = {"the", "a", "there", "answer", "any", "by", "bye", "their"};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < n; i++)
+    {
+        insert(arr[i], trie);
     }
-    cout<<search("there",trie);
+    cout << search("there", trie);
     return 0;
 }
