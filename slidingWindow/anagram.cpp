@@ -1,3 +1,4 @@
+//Given a word pat and a text txt. Return the count of the occurences of anagrams of the word in the text.
 #include <bits/stdc++.h>
 using namespace std;
 
