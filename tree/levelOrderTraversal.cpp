@@ -34,6 +34,7 @@ void LTraversal(Node *root)
         else if (!q.empty())
         {
             q.push(NULL);
+            cout<<endl;
         }
     }
 }
